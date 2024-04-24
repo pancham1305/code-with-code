@@ -1,0 +1,36 @@
+IDENTIFIER: 0
+ASSIGNMENT: 1
+NUMBER: 2
+OPERATOR: 3
+NEWLINE: 4
+UNKNOWN: 5
+
+{ type : 0, value: A }
+{ type : 1, value: = }
+{ type : 2, value: 1 }
+{ type : 4, value: 
+ }
+{ type : 0, value: B }
+{ type : 1, value: = }
+{ type : 2, value: 2 }
+{ type : 4, value: 
+ }
+{ type : 0, value: D }
+{ type : 1, value: = }
+{ type : 2, value: 3 }
+{ type : 4, value: 
+ }
+{ type : 0, value: E }
+{ type : 1, value: = }
+{ type : 0, value: A }
+{ type : 3, value: + }
+{ type : 0, value: D }
+{ type : 4, value: 
+ }
+{ type : 0, value: C }
+{ type : 1, value: = }
+{ type : 0, value: E }
+{ type : 3, value: + }
+{ type : 0, value: B }
+{ type : 4, value: 
+ }

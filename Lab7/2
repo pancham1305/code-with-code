@@ -1,0 +1,171 @@
+tokenss: A = 1
+tt: A
+tt: =
+token: 1
+tokenss: B = 2
+tt: B
+tt: =
+token: 2
+tokenss: D = 3
+tt: D
+tt: =
+token: 3
+tokenss: E = A + D
+tt: E
+tt: =
+tt: A
+tt: +
+token: D
+tokenss: C = E + B
+tt: C
+tt: =
+tt: E
+tt: +
+token: B
+Symbol Table:
+E : 0
+B : 0
+C : 0
+D : 0
+A : 0
+token: 0 : A
+token: 1 : =
+token: 2 : 1
+token: 4 : 
+
+token: 0 : B
+token: 1 : =
+token: 2 : 2
+token: 4 : 
+
+token: 0 : D
+token: 1 : =
+token: 2 : 3
+token: 4 : 
+
+token: 0 : E
+token: 1 : =
+token: 0 : A
+token: 3 : +
+token: 0 : D
+token: 4 : 
+
+token: 0 : C
+token: 1 : =
+token: 0 : E
+token: 3 : +
+token: 0 : B
+token: 4 : 
+
+token: value 0 : A
+token: 2 : 1
+token: 4 : 
+
+token: value 0 : B
+token: 2 : 2
+token: 4 : 
+
+token: value 0 : D
+token: 2 : 3
+token: 4 : 
+
+token: value 0 : E
+token: 0 : A
+token: 3 : +
+token: 0 : D
+token: 4 : 
+
+token: value 0 : C
+token: 0 : E
+token: 3 : +
+token: 0 : B
+token: 4 : 
+
+
+ASCII Parse Tree:
+(0: )
+  (2: A) (leaf node)
+  (1: )
+    (3: 1) (leaf node)
+
+
+
+(0: )
+  (2: B) (leaf node)
+  (1: )
+    (3: 2) (leaf node)
+
+
+
+(0: )
+  (2: D) (leaf node)
+  (1: )
+    (3: 3) (leaf node)
+
+
+
+(0: )
+  (2: E) (leaf node)
+  (1: )
+    (2: A) (leaf node)
+    (4: +) (leaf node)
+    (2: D) (leaf node)
+
+
+
+(0: )
+  (2: C) (leaf node)
+  (1: )
+    (2: E) (leaf node)
+    (4: +) (leaf node)
+    (2: B) (leaf node)
+
+
+
+E : 0 : 1
+B : 0 : 1
+C : 0 : 1
+D : 0 : 1
+A : 0 : 1
+Semetic Analysis: Passed
+Semetic Analysis: Passed
+Semetic Analysis: Passed
+Semetic Analysis: Passed
+Semetic Analysis: Passed
+
+Three-Address Code:
+t1 = 1
+A = t1
+t2 = 2
+B = t2
+t3 = 3
+D = t3
+t4 = A+D
+E = t4
+t5 = E+B
+C = t5
+semi optimized code: C = 1+3+2
+
+token: C
+token:  
+token: =
+token:  
+token: 1
+token: +
+token: 3
+token: +
+token: 2
+Optimized code: C = 1 + 3;
+C = C + 2
+
+line: C = 1 + 3
+line: C = C + 2
+C
+=
+1
+3
+C
+=
+C
++
+2
